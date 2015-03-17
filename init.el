@@ -29,6 +29,15 @@
 
 (helm-mode 1)
 
+;;
+;; Popwin
+;; ============
+
+(require 'popwin)
+(setq display-buffer-function 'popwin:display-buffer)
+(popwin-mode 1)
+
+;;
 ;; Ibuffer Mode
 ;; ============
 
