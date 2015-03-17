@@ -1,0 +1,3 @@
+# Ignore autosaves and backups
+backups/*
+autosaves/*
