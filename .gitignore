@@ -8,3 +8,7 @@ elpa/*
 
 # Ignore emacs desktop files
 .emacs.desktop*
+
+# Ignore project files
+projectile-bookmarks.eld
+projectile.cache
