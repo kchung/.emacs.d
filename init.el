@@ -17,7 +17,7 @@
 
 ;; Desktop Mode
 (setq desktop-restore-eager 20)
-(desktop-save-mode 1)
+(desktop-save-mode 0)
 
 ;;
 ;; Helm
