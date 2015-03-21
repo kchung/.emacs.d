@@ -19,6 +19,10 @@
 (setq desktop-restore-eager 20)
 (desktop-save-mode 0)
 
+;; Projectile
+(require 'projectile)
+(projectile-global-mode)
+
 ;;
 ;; Helm
 ;; =============
