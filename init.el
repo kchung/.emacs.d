@@ -1,5 +1,10 @@
 (package-initialize)
 
+;; Tabs - for work
+(setq-default c-basic-offset 4
+              tab-width 4
+              indent-tabs-mode t)
+
 ;; Define package repositories
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
 			 ("melpa" . "http://melpa.milkbox.net/packages/")))
