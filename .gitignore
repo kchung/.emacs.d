@@ -5,3 +5,6 @@ auto-save-list/*
 
 # Ignore elpa files
 elpa/*
+
+# Ignore emacs desktop files
+.emacs.desktop*
