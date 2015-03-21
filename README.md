@@ -1,3 +1,5 @@
+#### `.emacs.d`
+
 Emacs 24.x initialization file
 
 Packages:
