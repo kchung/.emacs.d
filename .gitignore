@@ -1,3 +1,7 @@
 # Ignore autosaves and backups
 backups/*
 autosaves/*
+auto-save-list/*
+
+# Ignore elpa files
+elpa/*
