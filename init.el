@@ -108,8 +108,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(helm-selection ((t (:background "color-27" :foreground "brightwhite"))))
+ '(magit-diff-add ((t (:inherit diff-added :background "black" :foreground "green"))))
+ '(magit-diff-del ((t (:inherit diff-removed :background "black" :foreground "red"))))
  '(magit-item-highlight ((t (:background "color-234"))))
- '(match ((t (:background "yellow")))))
+ '(match ((t (:background "black" :foreground "color-124")))))
 
 ;; Highligh which pane is active
 (set-face-attribute  'mode-line
