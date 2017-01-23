@@ -1,4 +1,14 @@
+;; loading package
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
 (package-initialize)
+
+(load "~/.emacs.d/packages.el")
+
+(load-theme 'sanityinc-tomorrow-bright t)
 
 (global-auto-revert-mode t)
 
@@ -7,10 +17,6 @@
 (setq-default c-basic-offset 4
               tab-width 4
               indent-tabs-mode t)
-
-;; Define package repositories
-(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-			 ("melpa" . "http://melpa.org/packages/")))
 
 ;; Go away menu bar
 (menu-bar-mode 0)
@@ -88,23 +94,21 @@
 (setq magit-auto-revert-mode nil)
 (setq magit-last-seen-setup-instructions "1.4.0")
 
-;; Change Magit diff colors (good for black backround terminals)
-(eval-after-load 'magit
-  '(progn
-     (set-face-foreground 'magit-diff-add "green3")
-     (set-face-foreground 'magit-diff-del "red3")
-     (when (not window-system)
-       (set-face-background 'magit-item-highlight "gray8"))))
-
-
 ;;
 ;; Auto-save
 ;; =========
 
 ;; Put autosave files (ie #foo#) and backup files (ie foo~) in ~/.emacs.d/.
 (custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(auto-save-file-name-transforms (quote ((".*" "~/.emacs.d/autosaves/\\1" t))))
- '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/")))))
+ '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/"))))
+ '(package-selected-packages
+   (quote
+	(color-theme-sanityinc-tomorrow web-mode scss-mode popwin magit helm-projectile expand-region))))
 
 ;; create the autosave dir if necessary, since emacs won't.
 (make-directory "~/.emacs.d/autosaves/" t)
@@ -116,9 +120,6 @@
 ;; =========
 
 (add-to-list 'auto-mode-alist '("\\.tpl\\'"   . html-mode))
-
-(require 'php-mode)
-(add-to-list 'auto-mode-alist '("\\.php\\'"   . php-mode))
 
 (require 'scss-mode)
 (add-to-list 'auto-mode-alist '("\\.scss\\'"  . scss-mode))
@@ -145,6 +146,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(default ((t (:background nil))))
  '(diff-added ((t (:inherit diff-changed))))
  '(diff-removed ((t (:inherit diff-changed))))
  '(helm-selection ((t (:background "color-27" :foreground "brightwhite"))))
