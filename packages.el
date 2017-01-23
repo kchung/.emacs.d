@@ -1,5 +1,4 @@
 (require 'cl)
-
 (require 'package)
 
 ;; Define package repositories
@@ -15,7 +14,7 @@
 	helm
 	helm-projectile
 	ibuffer
-    magit
+  magit
 	projectile
 	popwin
 	scss-mode
