@@ -7,16 +7,12 @@
 (package-initialize)
 
 (load "~/.emacs.d/packages.el")
+(load "~/.emacs.d/spacing.el")
 
+;; Load theme!
 (load-theme 'sanityinc-tomorrow-bright t)
 
 (global-auto-revert-mode t)
-
-;; Tabs - for work
-(setq indent-tabs-mode t)
-(setq-default c-basic-offset 4
-              tab-width 4
-              indent-tabs-mode t)
 
 ;; Go away menu bar
 (menu-bar-mode 0)
