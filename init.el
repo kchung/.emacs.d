@@ -15,6 +15,9 @@
 ;; Enable Column Number
 (setq column-number-mode t)
 
+;; Allow `y` and `n` instead of typing it out
+(fset 'yes-or-no-p 'y-or-n-p)
+
 ;; Desktop Mode
 (setq desktop-restore-eager 20)
 (desktop-save-mode 0)
