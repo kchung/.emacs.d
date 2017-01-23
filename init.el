@@ -1,6 +1,9 @@
 (package-initialize)
 
+(global-auto-revert-mode t)
+
 ;; Tabs - for work
+(setq indent-tabs-mode t)
 (setq-default c-basic-offset 4
               tab-width 4
               indent-tabs-mode t)
@@ -128,6 +131,8 @@
       (let ((web-mode-enable-part-face nil))
         ad-do-it)
     ad-do-it))
+
+(add-hook 'javascript-mode (lambda () (electric-indent-local-mode -1)))
 
 ;;
 ;; custom-set-faces
