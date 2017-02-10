@@ -104,7 +104,7 @@
  '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/"))))
  '(package-selected-packages
    (quote
-	(color-theme-sanityinc-tomorrow web-mode scss-mode popwin magit helm-projectile expand-region))))
+    (vue-mode js2-mode color-theme-sanityinc-tomorrow web-mode scss-mode popwin magit helm-projectile expand-region))))
 
 ;; create the autosave dir if necessary, since emacs won't.
 (make-directory "~/.emacs.d/autosaves/" t)
