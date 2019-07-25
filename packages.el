@@ -17,6 +17,7 @@
   magit
   projectile
   popwin
+  editorconfig
   scss-mode
   web-mode
   vue-mode

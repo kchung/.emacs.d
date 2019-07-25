@@ -27,6 +27,10 @@
 (setq desktop-restore-eager 20)
 (desktop-save-mode 0)
 
+;; editorconfig
+(require 'editorconfig)
+(editorconfig-mode 1)
+
 ;; Projectile
 (require 'projectile)
 (projectile-global-mode)
