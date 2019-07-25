@@ -3,23 +3,23 @@
 
 ;; Define package repositories
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-			 ("melpa" . "http://melpa.org/packages/")))
+       ("melpa" . "http://melpa.org/packages/")))
 
 (package-initialize)
 
 (defvar required-packages
   '(
-	color-theme-sanityinc-tomorrow
-	expand-region
-	helm
-	helm-projectile
-	ibuffer
+  color-theme-sanityinc-tomorrow
+  expand-region
+  helm
+  helm-projectile
+  ibuffer
   magit
-	projectile
-	popwin
-	scss-mode
-	web-mode
-	vue-mode
+  projectile
+  popwin
+  scss-mode
+  web-mode
+  vue-mode
   ) "a list of packages to ensure are installed at launch.")
 
 ; method to check if all packages are installed
