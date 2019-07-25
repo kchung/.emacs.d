@@ -124,6 +124,9 @@
 (require 'scss-mode)
 (add-to-list 'auto-mode-alist '("\\.scss\\'"  . scss-mode))
 
+(require 'php-mode)
+(add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
+
 ;; JSX
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
