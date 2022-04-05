@@ -18,6 +18,7 @@
   projectile
   popwin
   editorconfig
+  drag-stuff
   scss-mode
   web-mode
   vue-mode

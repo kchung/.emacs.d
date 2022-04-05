@@ -17,6 +17,10 @@
 ;; Go away menu bar
 (menu-bar-mode 0)
 
+;; Drag-stuff
+(drag-stuff-global-mode)
+(drag-stuff-define-keys)
+
 ;; Enable Column Number
 (setq column-number-mode t)
 
@@ -36,6 +40,9 @@
 (projectile-mode +1)
 (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+
+;; Stop asking if you want to save
+(set-buffer-modified-p nil)
 
 ;;
 ;; Helm
@@ -95,6 +102,7 @@
 (global-set-key (kbd "C-x g") 'magit-status)
 (setq magit-auto-revert-mode nil)
 (setq magit-last-seen-setup-instructions "1.4.0")
+(setq magit-save-repository-buffers nil)
 
 ;;
 ;; Auto-save
@@ -107,10 +115,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(auto-save-file-name-transforms (quote ((".*" "~/.emacs.d/autosaves/\\1" t))))
- '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/"))))
- '(package-selected-packages
-   (quote
-    (vue-mode js2-mode color-theme-sanityinc-tomorrow web-mode scss-mode popwin magit helm-projectile expand-region))))
+ '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/")))))
 
 ;; create the autosave dir if necessary, since emacs won't.
 (make-directory "~/.emacs.d/autosaves/" t)
@@ -178,3 +183,4 @@
                  :foreground "black"
                  :background "gray25"
                  :box '(:line-width 1 :style released-button))
+(put 'upcase-region 'disabled nil)
